@@ -9,9 +9,9 @@ import { DataFormat } from '../omnai-scope-server/live-data.service';
 export class DummyDataService implements DataSource {
     private readonly _data = signal<Record<string, DataFormat[]>>({});
 
-    readonly data = this._data.asReadonly(); 
+    readonly data = this._data.asReadonly();
     connect(): void {
-        interval(1000)
+        interval(0.002)
             .pipe(
                 map(() => ({
                     timestamp: Date.now(),

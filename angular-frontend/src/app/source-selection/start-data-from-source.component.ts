@@ -9,7 +9,7 @@ import { SourceSelectModalComponent } from './source-select-modal.component';
     standalone: true,
     imports: [CommonModule, MatDialogModule],
     template: `
-    <button (click)="openModal()">Start Data</button>
+    <button class="custom-btn" (click)="openModal()">Start Data</button>
   `
 })
 export class StartDataButtonComponent {
